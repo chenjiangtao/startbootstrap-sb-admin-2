@@ -77,14 +77,19 @@
                         <a href="#"><i class="fa  fa-envelope-o fa-fw"></i> 国内短信<span
                                 class="glyphicon arrow"></span></a>
                         <ul class="nav nav-second-level">
+
                             <li>
                                 <a href="smstest.html">测试</a>
                             </li>
                             <li>
-                                <a href="sign.html">签名/模板报备</a>
+                                <a href="sendsms.html">短信发送</a>
                             </li>
+
                             <li>
                                 <a href="smsorder.html">短信记录</a>
+                            </li>
+                            <li>
+                                <a href="sign.html">签名/模板报备</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -137,206 +142,224 @@
     </nav>
 
     <div id="page-wrapper">
+
         <!-- /.row -->
-        <div class="col-lg-10">
-            <div class="panel panel-default">
 
-                <!-- /.panel-heading -->
-                <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="panel panel-default">
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
 
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#account-pills" data-toggle="tab">帐户信息</a></li>
-                        <li><a href="#devAuth-pills" data-toggle="tab">开发者信息认证</a></li>
-                        <li><a href="#pwd-pills" data-toggle="tab">修改密码</a></li>
-                        <!--<li><a href="#template-pills" data-toggle="tab">短信模板</a></li>-->
-                    </ul>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#account-pills" data-toggle="tab">帐户信息</a></li>
+                            <li><a href="#devAuth-pills" data-toggle="tab">开发者信息认证</a></li>
+                            <li><a href="#pwd-pills" data-toggle="tab">修改密码</a></li>
+                            <!--<li><a href="#template-pills" data-toggle="tab">短信模板</a></li>-->
+                        </ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="account-pills">
-                            <form class="form-horizontal" role="form">
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">帐户</label>
-                                    <div class="col-sm-10">
-                                        <p class="form-control-static">18621569931</p>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="account-pills">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">帐户</label>
+                                        <div class="col-sm-10">
+                                            <p class="form-control-static">18621569931</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">用户名</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="text">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">用户名</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="text">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">联系人</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="text">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">联系人姓名</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">联系电话</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="text" placeholder="请填手机号码">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">联系电话</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="text" placeholder="请填手机号码">
+                                        </div>
                                     </div>
-                                </div>
-                                <!--<div class="form-group">-->
-                                <!--<label class="col-sm-2 control-label">免费短信提醒</label>-->
-                                <!--<div class="col-sm-10">-->
-                                <!--<input class="form-control" type="text" placeholder="请填手机号码">-->
-                                <!--</div>-->
-                                <!--</div>-->
-                                <!--提交-->
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label"></label>
-                                    <div class="col-sm-10">
-                                        <a href="#sendtest" class="btn btn-primary btn-sm">提交</a>
+                                    <!--<div class="form-group">-->
+                                    <!--<label class="col-sm-2 control-label">免费短信提醒</label>-->
+                                    <!--<div class="col-sm-10">-->
+                                    <!--<input class="form-control" type="text" placeholder="请填手机号码">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--提交-->
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-10">
+                                            <a href="#sendtest" class="btn btn-primary btn-sm">保存</a>
+                                        </div>
                                     </div>
-                                </div>
 
 
-                            </form>
-                        </div>
-
-                        <div class="tab-pane fade" id="devAuth-pills">
-                            <div class="form-group">
+                                </form>
+                            </div>
+                            <br>
+                            <div class=" tab-pane fade" id="devAuth-pills">
                                 <label class="col-sm-2 control-label">开发者类型</label>
-                                <div class="col-sm-10">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav nav-pills ">
-                                        <li class="active"><a href="#person-user" data-toggle="tab">个人</a></li>
-                                        <li><a href="#company-user" data-toggle="tab">公司</a></li>
-                                    </ul>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills ">
+                                    <li class="active"><a href="#person-user" data-toggle="tab">个人</a></li>
+                                    <li><a href="#company-user" data-toggle="tab">公司</a></li>
+                                </ul>
+
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="person-user">
+                                        <form class="form-horizontal" role="form">
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label ">真实姓名</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">证件号码</label>
+                                                <div class="col-sm-10">
+                                                    <input id="cardNumber" class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">证件照片</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control-static" type="file">
+                                                    <p class="help-block">
+                                                    <p><img class="img-thumbnail"
+                                                            src="https://www.yunpian.com/static/images4/back/id-sample.png">
+                                                    </p>
+                                                    请使用真实有效的身份证按下图示例拍照，<br> 需确保证件内容及脸部清晰，<br>
+                                                    上传图片支持2M以内的PNG、JPG、GIF格式</p>
+                                                </div>
+                                            </div>
+                                            <!--<div class="form-group">-->
+                                            <!--<label>File input</label>-->
+                                            <!--<input type="file">-->
+                                            <!--</div>-->
+                                            <!--提交-->
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10">
+                                                    <a href="#sendtest" class="btn btn-primary btn-sm">保存</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane fade" id="company-user">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">公司名称</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="text" placeholder="请输入公司名称">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">公司所属行业</label>
+                                                <div class="col-sm-10">
+                                                    <select id="company-type" class="form-control" type="text">
+                                                        <!--TODO 填充数据-->
+                                                        <option>选择1</option>
+                                                        <option>选择1</option>
+                                                        <option>选择1</option>
+                                                        <option>选择1</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">证件号码</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="text" placeholder="请输入营业执照号码">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">证件照片</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control-static" type="file">
+                                                    <p class="help-block">
+                                                    <p><img class="img-thumbnail"
+                                                            src="https://www.yunpian.com/static/images4/back/op-sample.png">
+                                                    </p>
+                                                    将通过年检的营业执照原件或盖章的复印件扫描、拍照后上传，文件支持2M以内的PNG、JPG、GIF格式</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10">
+                                                    <a href="#sendtest" class="btn btn-primary btn-sm">保存</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
                                 </div>
+
                             </div>
-                            <div class="tab-content">
-                                <div class="tab-pane fade in active" id="person-user">
 
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">真实姓名</label>
-                                            <div class="col-sm-10">
-                                                <input class="form-control" type="text" placeholder="江涛">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">证件号码</label>
-                                            <div class="col-sm-10">
-                                                <input id="cardNumber" class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">证件照片</label>
-                                            <div class="col-sm-10">
-                                                <input class="form-control-static" type="file">
-                                                <p class="help-block">
-                                                <p><img class="img-thumbnail"
-                                                        src="https://www.yunpian.com/static/images4/back/id-sample.png">
-                                                </p>
-                                                请使用真实有效的身份证按下图示例拍照，<br> 需确保证件内容及脸部清晰，<br> 上传图片支持2M以内的PNG、JPG、GIF格式</p>
-                                            </div>
-                                        </div>
-                                        <!--<div class="form-group">-->
-                                        <!--<label>File input</label>-->
-                                        <!--<input type="file">-->
-                                        <!--</div>-->
-                                        <!--提交-->
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <a href="#sendtest" class="btn btn-primary btn-sm">保存</a>
-                                            </div>
-                                        </div>
 
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="company-user">
+                            <div class="tab-pane fade" id="pwd-pills">
+                                <form class="form-horizontal" role="form">
 
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">帐户</label>
-                                            <div class="col-sm-10">
-                                                <p class="form-control-static">18621569931</p>
-                                            </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">旧密码</label>
+                                        <div class="col-sm-10">
+                                            <input id="oldpwd" class="form-control" type="text">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">新密码</label>
-                                            <div class="col-sm-10">
-                                                <input id="newpwd1" class="form-control" type="text">
-                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">新密码</label>
+                                        <div class="col-sm-10">
+                                            <input id="newpwd1" class="form-control" type="text">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">重复新密码</label>
-                                            <div class="col-sm-10">
-                                                <input id="newpwd2" class="form-control" type="text">
-                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">重复新密码</label>
+                                        <div class="col-sm-10">
+                                            <input id="newpwd2" class="form-control" type="text">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label"></label>
-                                            <div class="col-sm-10">
-                                                <a href="#sendtest" class="btn btn-primary btn-sm">发送</a>
-                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-10">
+                                            <a href="#sendtest" class="btn btn-primary btn-sm">修改</a>
                                         </div>
+                                    </div>
 
-                                    </form>
-                                </div>
+
+                                </form>
+
+
                             </div>
 
+                            <!--<div class="tab-pane fade" id="template-pills">-->
+                            <!--<form class="form-horizontal" role="form">-->
+                            <!--<div class="form-group">-->
+                            <!--<label class="col-sm-2 control-label">手机号</label>-->
+                            <!--<div class="col-sm-10">-->
+                            <!--<input class="form-control" type="text">-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</form>-->
+                            <!--</div>-->
                         </div>
-
-
-                        <div class="tab-pane fade" id="pwd-pills">
-                            <form class="form-horizontal" role="form">
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">旧密码</label>
-                                    <div class="col-sm-10">
-                                        <input id="oldpwd" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">新密码</label>
-                                    <div class="col-sm-10">
-                                        <input id="newpwd1" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">重复新密码</label>
-                                    <div class="col-sm-10">
-                                        <input id="newpwd2" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label"></label>
-                                    <div class="col-sm-10">
-                                        <a href="#sendtest" class="btn btn-primary btn-sm">修改</a>
-                                    </div>
-                                </div>
-
-
-                            </form>
-
-
-                        </div>
-
-                        <!--<div class="tab-pane fade" id="template-pills">-->
-                        <!--<form class="form-horizontal" role="form">-->
-                        <!--<div class="form-group">-->
-                        <!--<label class="col-sm-2 control-label">手机号</label>-->
-                        <!--<div class="col-sm-10">-->
-                        <!--<input class="form-control" type="text">-->
-                        <!--</div>-->
-                        <!--</div>-->
-                        <!--</form>-->
-                        <!--</div>-->
                     </div>
+                    <!-- /.panel-body -->
                 </div>
-                <!-- /.panel-body -->
+                <!-- /.panel -->
             </div>
-            <!-- /.panel -->
         </div>
-
 
     </div>
     <!-- /#wrapper -->
