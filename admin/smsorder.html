@@ -22,7 +22,6 @@
 
     <!-- DataTables CSS -->
     <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
-
     <!-- DataTables Responsive CSS -->
     <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
 
@@ -30,11 +29,9 @@
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
 
 </head>
 
@@ -46,27 +43,24 @@
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">SMS Pai</a>
+            <a class="navbar-brand" href="main.html">SMS Pai</a>
         </div>
         <!-- /.navbar-header -->
 
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i> <i
+                        class="fa fa-caret-down"></i> </a>
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#"><i class="fa fa-user fa-fw"></i> 个人信息</a>
                     </li>
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> 帐户设置</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    <li><a href="../pages/login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -79,10 +73,11 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="index.html"><i class="fa  fa-fw"></i> 管理控制台</a>
+                        <a href="main.html"><i class="fa  fa-fw"></i> 管理控制台</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa  fa-fw"></i> 国内短信<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa  fa-envelope-o fa-fw"></i> 国内短信<span
+                                class="glyphicon arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="smstest.html">测试</a>
@@ -98,14 +93,14 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-fw"></i> 财务<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-cny fa-fw "></i> 财务<span class="glyphicon arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">充值</a>
+                                <a href="offline_charge.html">线下充值</a>
                             </li>
-                            <li>
-                                <a href="buttons.html">发票申请</a>
-                            </li>
+                            <!--<li>-->
+                            <!--<a href="buttons.html">发票申请</a>-->
+                            <!--</li>-->
                             <!--<li>-->
                             <!--<a href="buttons.html">日账单</a>-->
                             <!--</li>-->
@@ -114,8 +109,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa  fa-fw"></i> 设置<span
-                                class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-gears fa-fw"></i> 设置<span class="glyphicon arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="sys_setting.html">系统设置</a>
@@ -127,7 +121,8 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa  fa-fw"></i> 邀请好友与分享<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-share-alt fa-fw"></i> 邀请好友与分享<span
+                                class="glyphicon arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="invite_friends.html">好友邀请</a>
@@ -146,7 +141,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Tables</h1>
+                <h1 class="page-header">短信发送记录</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -155,11 +150,12 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        DataTables Advanced Tables
+                        短信发送记录
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <table width="100%" class="table table-striped table-bordered table-hover"
+                               id="dataTables-example">
                             <thead>
                             <tr>
                                 <th>Rendering engine</th>
@@ -607,26 +603,25 @@
 
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#dataTables-example').DataTable({
             responsive: true
         });
     });
 
-//    $('#myTable').DataTable( {
-//        ajax: '/api/myData'
-//    } );
+    //    $('#myTable').DataTable( {
+    //        ajax: '/api/myData'
+    //    } );
 
-    $('#mytable').DataTable( {
+    $('#mytable').DataTable({
         ajax: '/api/myData', //请求的地址
         columns: [
-        { data: 'name' },
-        { data: 'mobile' },
-        { data: 'status' }
-    ]
-    } );
+            {data: 'name'},
+            {data: 'mobile'},
+            {data: 'status'}
+        ]
+    });
 </script>
-
 
 
 </body>

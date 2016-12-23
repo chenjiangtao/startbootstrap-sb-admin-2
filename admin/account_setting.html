@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SMS PAI</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="main.html">SMS Pai</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i> <i
+                        class="fa fa-caret-down"></i> </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> 个人信息</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 帐户设置</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="../pages/login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="main.html"><i class="fa  fa-fw"></i> 管理控制台</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa  fa-envelope-o fa-fw"></i> 国内短信<span
+                                class="glyphicon arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="smstest.html">测试</a>
+                            </li>
+                            <li>
+                                <a href="sign.html">签名/模板报备</a>
+                            </li>
+                            <li>
+                                <a href="smsorder.html">短信记录</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-cny fa-fw "></i> 财务<span class="glyphicon arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="offline_charge.html">线下充值</a>
+                            </li>
+                            <!--<li>-->
+                            <!--<a href="buttons.html">发票申请</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="buttons.html">日账单</a>-->
+                            <!--</li>-->
+
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-gears fa-fw"></i> 设置<span class="glyphicon arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="sys_setting.html">系统设置</a>
+                            </li>
+                            <li>
+                                <a href="account_setting.html">账户设置</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-share-alt fa-fw"></i> 邀请好友与分享<span
+                                class="glyphicon arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="invite_friends.html">好友邀请</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <!-- /.row -->
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#account-pills" data-toggle="tab">帐户信息</a></li>
+                        <li><a href="#devAuth-pills" data-toggle="tab">开发者信息认证</a></li>
+                        <li><a href="#pwd-pills" data-toggle="tab">修改密码</a></li>
+                        <!--<li><a href="#template-pills" data-toggle="tab">短信模板</a></li>-->
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="account-pills">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">帐户</label>
+                                    <div class="col-sm-10">
+                                        <p class="form-control-static">18621569931</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">用户名</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">联系人</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">联系电话</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" placeholder="请填手机号码">
+                                    </div>
+                                </div>
+                                <!--<div class="form-group">-->
+                                <!--<label class="col-sm-2 control-label">免费短信提醒</label>-->
+                                <!--<div class="col-sm-10">-->
+                                <!--<input class="form-control" type="text" placeholder="请填手机号码">-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--提交-->
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-10">
+                                        <a href="#sendtest" class="btn btn-primary btn-sm">提交</a>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="devAuth-pills">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">开发者类型</label>
+                                <div class="col-sm-10">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-pills ">
+                                        <li class="active"><a href="#person-user" data-toggle="tab">个人</a></li>
+                                        <li><a href="#company-user" data-toggle="tab">公司</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="person-user">
+
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">真实姓名</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" placeholder="江涛">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">证件号码</label>
+                                            <div class="col-sm-10">
+                                                <input id="cardNumber" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">证件照片</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control-static" type="file">
+                                                <p class="help-block">
+                                                <p><img class="img-thumbnail"
+                                                        src="https://www.yunpian.com/static/images4/back/id-sample.png">
+                                                </p>
+                                                请使用真实有效的身份证按下图示例拍照，<br> 需确保证件内容及脸部清晰，<br> 上传图片支持2M以内的PNG、JPG、GIF格式</p>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">-->
+                                        <!--<label>File input</label>-->
+                                        <!--<input type="file">-->
+                                        <!--</div>-->
+                                        <!--提交-->
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <a href="#sendtest" class="btn btn-primary btn-sm">保存</a>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="company-user">
+
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">帐户</label>
+                                            <div class="col-sm-10">
+                                                <p class="form-control-static">18621569931</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">新密码</label>
+                                            <div class="col-sm-10">
+                                                <input id="newpwd1" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">重复新密码</label>
+                                            <div class="col-sm-10">
+                                                <input id="newpwd2" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-10">
+                                                <a href="#sendtest" class="btn btn-primary btn-sm">发送</a>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tab-pane fade" id="pwd-pills">
+                            <form class="form-horizontal" role="form">
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">旧密码</label>
+                                    <div class="col-sm-10">
+                                        <input id="oldpwd" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">新密码</label>
+                                    <div class="col-sm-10">
+                                        <input id="newpwd1" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">重复新密码</label>
+                                    <div class="col-sm-10">
+                                        <input id="newpwd2" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-10">
+                                        <a href="#sendtest" class="btn btn-primary btn-sm">修改</a>
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+
+                        </div>
+
+                        <!--<div class="tab-pane fade" id="template-pills">-->
+                        <!--<form class="form-horizontal" role="form">-->
+                        <!--<div class="form-group">-->
+                        <!--<label class="col-sm-2 control-label">手机号</label>-->
+                        <!--<div class="col-sm-10">-->
+                        <!--<input class="form-control" type="text">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</form>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+
+
+    </div>
+    <!-- /#wrapper -->
+
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
