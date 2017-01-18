@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SMS PAI</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="main.html">SMS Pai</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i>
+                    <i class="fa fa-caret-down"></i> </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> 个人信息</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 帐户设置</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="../pages/login.html"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="main.html"><i class="fa  fa-fw"></i> 管理控制台</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa  fa-envelope-o fa-fw"></i> 国内短信
+                            <span class="glyphicon arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="smstest.html">测试</a>
+                            </li>
+                            <li>
+                                <a href="sendsms.html">短信发送</a>
+                            </li>
+
+                            <li>
+                                <a href="smsorder.html">短信记录</a>
+                            </li>
+                            <li>
+                                <a href="sign.html">签名/模板报备</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-cny fa-fw "></i> 财务
+                            <span class="glyphicon arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+
+                            <!--<li>-->
+                            <!--<a href="buttons.html">发票申请</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="buttons.html">日账单</a>-->
+                            <!--</li>-->
+                            <li>
+                                <a href="charge.html">充值</a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">发票申请</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-gears fa-fw"></i> 设置
+                            <span class="glyphicon arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="sys_setting.html">系统设置</a>
+                            </li>
+                            <li>
+                                <a href="account_setting.html">账户设置</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-share-alt fa-fw"></i> 邀请好友与分享
+                            <span class="glyphicon arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="invite_friends.html">好友邀请</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="panel panel-default">
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#sendsms-pills" data-toggle="tab">普通发送</a>
+                            </li>
+                            <!--<li>-->
+                            <!--<a href="#sendGrups-pills" data-toggle="tab">群组发送</a>-->
+                            <!--</li>-->
+                            <li>
+                                <a href="#sendFile-pills" data-toggle="tab">上传文件发送</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content small">
+                            <div class="tab-pane fade in active" id="sendsms-pills">
+                                <form class="form-horizontal" role="form">
+                                    <br>
+                                    <!--添加签名-->
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">手机号码</label>
+                                        <div class="col-sm-8">
+                                            <textarea id="mobiles" class="form-control" rows="4"></textarea>
+                                            <p class="help-block small">手机号码用逗号(,)隔开</p>
+                                        </div>
+
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">短信内容</label>
+                                        <div class="col-sm-8">
+                                            <textarea id="smsContent" class=" form-control" rows="4"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">发送时间</label>
+
+                                        <div class=" col-sm-10 date-picker">
+                                            <input class="text-input-cpt" type="text" placeholder="" onclick="WdatePicker({
+                                                                dateFmt: 'yyyy-MM-dd HH:mm:ss',
+                                                                errDealMode : '0',
+//                                                                minDate: '%y-{%M-3}-%d',
+//                                                                maxDate: '2016-12-26 23:59:59',
+                                                            })">
+                                            <p class=" help-block small">不选时间为实时发送</p>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-8">
+                                            <p><a href="#addSign" class="btn btn-primary btn-xs">发送</a></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="sendFile-pills">
+                                <form class="form-horizontal" role="form">
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">文件</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control-static" type="file">
+                                            <p class="help-block small">
+                                                请上传txt格式文件，一个手机号码一行</p>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <!--添加签名-->
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">短信内容</label>
+                                        <div class="col-sm-8">
+                                            <textarea id="sendFile-smsContent" class=" form-control" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="form-group">
+
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-8">
+                                            <p><a href="#addTmp" class="btn btn-primary btn-xs">保存</a></p>
+                                        </div>
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /#wrapper -->
+
+
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../vendor/raphael/raphael.min.js"></script>
+<script src="../vendor/morrisjs/morris.min.js"></script>
+<script src="../data/morris-data.js"></script>
+
+<!--My97DatePicker -->
+<script src="../vendor/My97DatePicker/WdatePicker.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+
+    //        两个数据表
+    $(document).ready(function () {
+        $('#dataTables-sendsms').DataTable({
+            responsive: true
+        });
+    });
+    $(document).ready(function () {
+        $('#dataTables-sendGrups').DataTable({
+            responsive: true
+        });
+    });
+    $(document).ready(function () {
+        $('#dataTables-sendFile').DataTable({
+            responsive: true
+        });
+    });
+
+    $('#home-pills').DataTable({
+        ajax: '/api/myData', //请求的地址
+        columns: [
+            {data: 'name'},
+            {data: 'mobile'},
+            {data: 'status'}
+        ]
+    });
+
+
+</script>
+
+</body>
+
+</html>
