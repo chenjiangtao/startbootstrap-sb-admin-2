@@ -1,3 +1,13 @@
+# 运行说明
+- 安装依赖包
+```sbtshell
+cnpm install browser-sync gulp-header gulp-clean-css gulp-rename gulp-uglify gulp gulp-less
+```
+运行
+```
+gulp dev
+```
+
 # [Start Bootstrap](http://startbootstrap.com/) - [SB Admin 2](http://startbootstrap.com/template-overviews/sb-admin-2/)
 [![CDNJS](https://img.shields.io/cdnjs/v/startbootstrap-sb-admin-2.svg)](https://cdnjs.com/libraries/startbootstrap-sb-admin-2)
 
